@@ -35,9 +35,30 @@ $(document).ready(function () {
     },
   });
 
+  $(".owl-banner").owlCarousel({
+    loop: true,
+    center: true,
+    margin: 400,
+    nav: false,
+    dots: false,
+    // autoWidth:true,
+    // autoplay: true,
+    // autoplayTimeout: 3000,
+    // autoplaySpeed: 1500,
+    items: 1,
+  });
+
   $(window).on("load scroll", function () {
     //現時点のスクロールの高さ取得
     const scrollPosition = $(window).scrollTop();
+    if (scrollPosition > 109) {
+      $("#header").css({
+        background: "var(--c-gray-2)",
+      });
+    } else {
+      $("#header").css({ background: "unset" });
+    }
+
     //ウィンドウの高さ取得
     const windowHeight = $(window).height();
 

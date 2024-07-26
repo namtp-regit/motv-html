@@ -1,0 +1,36 @@
+#banner {
+    position: relative;
+    height: 800px;
+    margin-top: -109px;
+
+    .owl-banner {
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 713px;
+        height: 688px;
+        
+        .owl-item {
+            .item {
+                .owl-img {
+                    width: 713px;
+                    height: 688px;
+                    object-fit: cover;
+                }
+            }
+        }
+    }
+
+    .banner-bg {
+        width: 100%;
+        
+    }
+
+    .banner-text {
+        width: 450px;
+        height: 450px;
+        position: absolute;
+        top: 169px;
+        left: 167px;
+    }
+}

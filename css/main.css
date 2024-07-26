@@ -1159,6 +1159,7 @@
   --c-text: #000;
   --c-gray: #7C7C7C;
   --c-gray-2: #17181A;
+  --c-gray-3: #DEDDDD;
   --c-white: #fff;
   --c-white-2: #f6f6f6;
   --c-blue: #154A7C;
@@ -1424,12 +1425,11 @@ p {
   top: 0;
   left: 0;
   z-index: 9;
-  background-image: linear-gradient(90deg, #000 50%, #611510 100%);
-  padding: 70px 0 18px;
+  padding: 0;
+  height: 109px;
 }
 #header .box-header {
-  max-width: 1700px;
-  margin: 0 auto;
+  width: 100%;
 }
 #header .navbar {
   padding: 0;
@@ -1437,13 +1437,40 @@ p {
 }
 #header .navbar .navbar-brand {
   padding: 0;
+  margin-left: 46px;
+  margin-right: 0;
 }
 #header .navbar .navbar-brand .logo {
-  height: 95px;
+  height: 21px;
+}
+#header .navbar .collapse .navbar-nav .menu-item:last-child .nav-link {
+  background-color: red;
 }
 #header .navbar .collapse .navbar-nav .menu-item .nav-link {
+  font-family: "Staatliches", sans-serif;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 1;
+  letter-spacing: 2.2px;
+  color: var(--c-white);
+  text-align: center;
   padding: 0;
-  padding-left: 62px;
+  padding: 0 35px;
+  display: inline-flex;
+  height: 109px;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+#header .navbar .collapse .navbar-nav .menu-item .nav-link span {
+  display: block;
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bold;
+  font-size: 11px;
+  line-height: 1;
+  letter-spacing: 0.55px;
+  color: var(--c-white);
+  margin-top: 6px;
 }
 #header .navbar .collapse .group-btn-header {
   margin-left: 62px;
@@ -1679,6 +1706,19 @@ p {
 #banner {
   position: relative;
   height: 800px;
+  margin-top: -109px;
+}
+#banner .owl-banner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 713px;
+  height: 688px;
+}
+#banner .owl-banner .owl-item .item .owl-img {
+  width: 713px;
+  height: 688px;
+  object-fit: cover;
 }
 #banner .banner-bg {
   width: 100%;
@@ -1687,10 +1727,15 @@ p {
   width: 450px;
   height: 450px;
   position: absolute;
-  top: 60px;
-  left: 60px;
+  top: 169px;
+  left: 167px;
 }
 
+#news {
+  position: relative;
+  margin-top: -50px;
+  margin-bottom: 73px;
+}
 #news .box {
   max-width: 991px;
   margin: 0 auto;
@@ -1699,6 +1744,64 @@ p {
   display: grid;
   grid-template-columns: 110px 1fr;
   gap: 70px;
+}
+#news .box .child .news__title {
+  text-align: right;
+}
+#news .box .child .news__title .title {
+  font-family: "Staatliches", sans-serif;
+  font-weight: 400;
+  font-size: 55px;
+  line-height: 69px;
+  letter-spacing: 0.15px;
+  color: var(--c-blue);
+  text-align: center;
+  margin-bottom: 20px;
+}
+#news .box .child .news__title .desc {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 29px;
+  letter-spacing: 0.05px;
+  color: var(--c-blue);
+  text-align: right;
+  margin-bottom: 24px;
+}
+#news .box .child .news__title .icon-right {
+  width: 30px;
+}
+#news .box .child .news__list .news__item {
+  display: grid;
+  grid-template-columns: 77px 1fr 30px;
+  align-items: center;
+  gap: 20px;
+  padding: 15px 0;
+}
+#news .box .child .news__list .news__item:not(#news .box .child .news__list .news__item:last-child) {
+  border-bottom: 1px solid var(--c-gray-3);
+}
+#news .box .child .news__list .news__item .news__item-date {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.7px;
+  color: var(--c-text);
+}
+#news .box .child .news__list .news__item .news__item-title {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 0.7px;
+  color: var(--c-text);
+}
+#news .box .child .news__list .news__item .news__item-right {
+  width: 30px;
+}
+#news .box .child .news__list .news__item .news__item-right img {
+  width: 100%;
 }
 
 .btn-view_more, #about .box .about__child .about__list .about__item .about__item-btn a, #products .box .products__up .products__up-child .products__up-child__group .products__up-child__group-btn, #works .box .works__btn a, #pick-up .box .pick-up__list .pick-up__item .pick-up__item-content .pick-up__item-content__btn {
@@ -1927,7 +2030,18 @@ p {
 }
 
 #about {
-  padding: 182px 0 130px;
+  margin: 182px 0 130px;
+  position: relative;
+}
+#about::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 867px;
+  height: 576px;
+  background: url(./../imgs/img-10.png) no-repeat;
+  background-size: cover;
 }
 #about .box {
   max-width: 1080px;
@@ -1935,9 +2049,46 @@ p {
   display: grid;
   grid-template-columns: 1fr 656px;
   gap: 168px;
+  position: relative;
+  z-index: 1;
+  height: 576px;
+  align-items: center;
 }
-#about .box .about__child img {
-  width: 100%;
+#about .box .about__child .about__child-title .line {
+  width: 43px;
+  height: 7px;
+  background-color: var(--c-white);
+}
+#about .box .about__child .about__child-title .title {
+  font-family: "Staatliches", sans-serif;
+  font-weight: 400;
+  font-size: 55px;
+  line-height: 69px;
+  letter-spacing: 0.15px;
+  color: var(--c-blue);
+  text-align: center;
+  text-align: left;
+  color: var(--c-white);
+  margin-bottom: 0;
+}
+#about .box .about__child .about__child-title .desc {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 29px;
+  letter-spacing: 0.05px;
+  color: var(--c-blue);
+  color: var(--c-white);
+  margin-bottom: 12px;
+}
+#about .box .about__child .about__child-title .desc-short {
+  font-family: "Noto Sans JP", sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 24px;
+  letter-spacing: 2px;
+  color: var(--c-white);
+  font-weight: normal;
 }
 #about .box .about__child .about__list {
   display: flex;
@@ -1995,4 +2146,32 @@ p {
   right: 20px;
   color: var(--c-white);
   text-decoration: none;
+}
+
+#banner {
+  position: relative;
+  height: 800px;
+  margin-top: -109px;
+}
+#banner .owl-banner {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 713px;
+  height: 688px;
+}
+#banner .owl-banner .owl-item .item .owl-img {
+  width: 713px;
+  height: 688px;
+  object-fit: cover;
+}
+#banner .banner-bg {
+  width: 100%;
+}
+#banner .banner-text {
+  width: 450px;
+  height: 450px;
+  position: absolute;
+  top: 169px;
+  left: 167px;
 }

@@ -77,12 +77,11 @@
     top: 0;
     left: 0;
     z-index: 9;
-    background-image: linear-gradient(90deg, #000 50%, #611510 100%);
-    padding: 70px 0 18px;
+    padding: 0;
+    height: 109px;
 
     .box-header {
-        max-width: 1700px;
-        margin: 0 auto;
+        width: 100%;
     }
 
     .navbar {
@@ -91,19 +90,37 @@
 
         .navbar-brand {
             padding: 0;
+            margin-left: 46px;
+            margin-right: 0;
 
             .logo {
-                height: 95px;
+                height: 21px;
             }
         }
         
         .collapse {
             .navbar-nav {
                 .menu-item {
+                    &:last-child {
+                        .nav-link {
+                            background-color: red;
+                        }
+                    }
                     .nav-link {
-                        // @include content(26px, inherit, var(--c-white));
+                        @include font-staatliches(22px, 2.2px, var(--c-white), 1);
                         padding: 0;
-                        padding-left: 62px;
+                        padding: 0 35px;
+                        display: inline-flex;
+                        height: 109px;
+                        align-items: center;
+                        justify-content: center;
+                        flex-direction: column;
+                        
+                        span {
+                            display: block;
+                            @include content-noto-sans(11px, 0.55px, var(--c-white), 1);
+                            margin-top: 6px;
+                        }
                     }
                 }
             }
