@@ -1,0 +1,48 @@
+#privacy {
+    margin: auto;
+    margin-top: 82px;
+    max-width: 800px;
+    margin-bottom: 150px;
+
+    .introduce {
+        color: var(--000000, #000);
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+        letter-spacing: 0.8px;
+        margin-top: 70px;
+    }
+
+    .privacy_list {
+        margin-top: 70px;
+
+        &_item {
+            margin-bottom: 40px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+            &-title {
+                color: var(--154-a-7-c, #001E62);
+                padding-bottom: 20px;
+                border-bottom: 1px solid #DEDDDD;
+                margin-bottom: 20px;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+                letter-spacing: 1px;
+            }
+
+            &-content {
+                color: var(--000000, #000);
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0.7px;
+            }
+        }
+    }
+}

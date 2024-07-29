@@ -1,0 +1,106 @@
+#works-screen {
+    margin: auto;
+    margin-top: 82px;
+    max-width: 1080px;
+    margin-bottom: 150px;
+
+    .works_list {
+        margin-top: 70px;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        column-gap: 30px;
+        row-gap: 55px;
+
+        &_item {
+            &-block-bottom {
+                margin-top: 14px;
+            }
+
+            &-img {
+                width: 100%;
+            }
+
+            &-date {
+                color: var(--154-a-7-c, #001E62);
+                font-family: Staatliches;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0.8px;
+                margin-bottom: 0;
+            }
+
+            &-content {
+                color: #000;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                letter-spacing: 0.8px;
+            }
+        }
+    }
+
+    .paging {
+        display: flex;
+        justify-content: center;
+        margin: auto;
+        margin-top: 100px;
+
+        &_page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            list-style: none;
+            gap: 12px;
+
+            li {
+                list-style: none;
+            }
+
+            &-item {
+                .page-link {
+                    border: 1px solid var(--154-a-7-c, #001E62);
+                    font-family: Staatliches;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    letter-spacing: 0.8px;
+
+                    &:hover {
+                        background: var(--154-a-7-c, #001E62);
+                        color: #fff;
+                    }
+                }
+
+                &-dot {
+                    .page-link {
+                        border: none;
+
+                        &:hover {
+                            background: var(--154-a-7-c, #001E62);
+                            color: #fff;
+                        }
+                    }
+                }
+
+                &.active {
+                    .page-link {
+                        background: var(--154-a-7-c, #001E62);
+                        color: #fff;
+                    }
+                }
+            }
+
+            &-pre {
+                margin-right: 10px;
+            }
+
+            &-next {
+                margin-left: 10px;
+            }
+        }
+    }
+}

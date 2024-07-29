@@ -48,6 +48,24 @@ $(document).ready(function () {
     items: 1,
   });
 
+  const productThumb = new Swiper(".img-product-thumb", {
+    spaceBetween: 10,
+    slidesPerView: 5,
+    freeMode: true,
+    watchSlidesProgress: true,
+  });
+
+  new Swiper(".img-product", {
+    spaceBetween: 10,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+    thumbs: {
+      swiper: productThumb,
+    },
+  });
+
   $(window).on("load scroll", function () {
     //現時点のスクロールの高さ取得
     const scrollPosition = $(window).scrollTop();
@@ -74,4 +92,25 @@ $(document).ready(function () {
       }
     });
   });
+
+  $('.form-select').change(function () {
+    if ($(this).children('option:first-child').is(':selected')) {
+      $(this).addClass('placeholder');
+    } else {
+      console.log(2);
+      $(this).removeClass('placeholder');
+    }
+  });
+
+  $(".interview_main_block-img").each(function () {
+    const countImg = $(this).find('img').length
+    if (countImg > 1) {
+      $(this).css({
+        "display": "grid",
+        "grid-template-columns": `repeat(${countImg},1fr)`,
+        "gap": "40px"
+      })
+    }
+  })
+
 });

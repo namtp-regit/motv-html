@@ -1,0 +1,111 @@
+#company {
+    margin: auto;
+    margin-top: 82px;
+    max-width: 800px;
+    margin-bottom: 150px;
+
+    .banner-company {
+        width: 100%;
+        height: 240px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
+        margin-top: 80px;
+        background: url("../imgs/banner-comapny.jpg") lightgray 0px -69.413px / 100% 237.844% no-repeat;
+    }
+
+    .content {
+        margin-top: 40px;
+
+        &_title {
+            color: var(--154-a-7-c, #001E62);
+            font-family: Staatliches;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 103%;
+            letter-spacing: 3px;
+        }
+
+        &_description {
+            margin-top: 30px;
+            color: #000;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+        }
+    }
+
+    .introduce {
+        margin-top: 40px;
+
+        .introduce_item {
+            padding: 40px 0;
+            border-bottom: 1px solid #BDBDBD;
+            display: grid;
+            grid-template-columns: 110px 1fr;
+            align-items: flex-start;
+
+            &_block {
+                margin-bottom: 30px;
+
+                &:last-child {
+                    margin-bottom: 0;
+                }
+                ul li {
+                    &::marker {
+                        font-size: 14px;
+                    }
+                }
+            }
+
+            &_title {
+                margin-bottom: 0;
+                color: #000000;
+                font-family: "Zen Kaku Gothic New";
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px;
+            }
+
+            &_content {
+                color: #000000;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+            }
+
+            &_right {
+                &_box {
+                    display: flex;
+                    align-items: center;
+                    gap: 40px;
+
+                    &-left {
+                        width: 60%;
+                        ul {
+                            margin-top: 20px;
+                        }
+                    }
+
+                    &-right {
+                        max-width: 192px;
+                        height: 258px;
+                        display: flex;
+                        align-items: center;
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
