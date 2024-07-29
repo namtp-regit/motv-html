@@ -93,12 +93,24 @@ $(document).ready(function () {
     });
   });
 
-  $('.form-select').change(function() {
+  $('.form-select').change(function () {
     if ($(this).children('option:first-child').is(':selected')) {
       $(this).addClass('placeholder');
     } else {
       console.log(2);
-     $(this).removeClass('placeholder');
+      $(this).removeClass('placeholder');
     }
-   });
+  });
+
+  $(".interview_main_block-img").each(function () {
+    const countImg = $(this).find('img').length
+    if (countImg > 1) {
+      $(this).css({
+        "display": "grid",
+        "grid-template-columns": `repeat(${countImg},1fr)`,
+        "gap": "40px"
+      })
+    }
+  })
+
 });

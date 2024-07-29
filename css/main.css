@@ -2771,3 +2771,95 @@ p {
 #works-screen .paging_page-next {
   margin-left: 10px;
 }
+
+#interview {
+  margin: auto;
+  margin-top: 82px;
+  max-width: 800px;
+  margin-bottom: 150px;
+}
+#interview img {
+  width: 100%;
+  object-fit: cover;
+  height: 100%;
+}
+#interview .mt_30 {
+  margin-top: 30px;
+}
+#interview .mt-70 {
+  margin-top: 70px;
+}
+#interview .interview_main {
+  margin-top: 80px;
+}
+#interview .interview_main-img-top img {
+  height: 365px;
+}
+#interview .interview_main-content {
+  color: var(--000000, #000);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  letter-spacing: 0.8px;
+  white-space: pre-line;
+}
+#interview .interview_main_block {
+  margin-top: 70px;
+  padding-bottom: 70px;
+  border-bottom: 1px solid #BDBDBD;
+}
+#interview .interview_main_block:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+#interview .interview_main_block .interview_main-content {
+  margin-top: 26px;
+  padding: 0 45px;
+}
+#interview .interview_main_block-img {
+  margin: 70px 0;
+  width: auto;
+  height: 489px;
+}
+#interview .interview_main_block-box-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 70px;
+}
+#interview .interview_main_block-box-preview_img {
+  max-width: 454px;
+}
+#interview .interview_main_block-box-preview .interview_main-content {
+  font-size: 14px;
+  margin-top: 20px;
+}
+#interview .interview_main-footer {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+}
+#interview .interview_main-footer_logo {
+  max-width: 400px;
+}
+#interview .interview_main-footer_link {
+  background: var(--e-80411, #CA000C);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 296px;
+  height: 52px;
+  color: var(--ffffff, #FFF);
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+  letter-spacing: 2.7px;
+  text-decoration: none;
+}
